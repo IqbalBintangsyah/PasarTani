@@ -1,0 +1,10 @@
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.static {
+    position: static;
+    padding-top: 20px;
+}

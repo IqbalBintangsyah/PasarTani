@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="{% static 'pembeli/style.css' %}">
+        <title>Dashboard</title>
+    </head>
+    <body>
+        <h1>Dashboard Pengguna</h1>
+        <h3>Berikut informasi benih yang kamu subscribe</h3>
+        <div class="grid-container">
+            {% for benih in subscribe %}
+                <p>{{ benih }}</p>
+                <p>{{ subscribe|get_item:benih}}</p>
+            {% endfor %}
+        </div>
+        <div class="static">
+            <a href="{% url 'pembeli:pilih' %}">Pilih ulang</a>
+        </div>
+    </body>
+</html>

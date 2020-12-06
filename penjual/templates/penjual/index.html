@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PASAR TANI</title>
+	</head>
+	<body>
+		<h1>Form Input Suplai Benih</h1>
+		<form action="{% url 'penjual:pub' %}" method="POST">
+			{% csrf_token %}
+			{{ formSuplai }}
+			<input type="submit">
+		</form>
+	</body>
+</html>

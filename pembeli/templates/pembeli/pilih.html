@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="{% static 'pembeli/style.css' %}">
+        <title>Pilih Benih</title>
+    </head>
+    <body>
+        <h1>Selamat Datang!</h1>
+        <h3>Silahkan pilih benih yang anda inginkan</h3>
+        <form method="POST" action="{% url 'pembeli:dashboard' %}">
+            {% csrf_token %}
+            {{ form }}
+            <div class="static">
+                <input type="submit"></a>
+            </div>
+        </form>
+        <script src="{% static 'pembeli/func.js' %}"></script>
+    </body>
+</html>
